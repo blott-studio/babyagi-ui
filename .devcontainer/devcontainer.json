@@ -1,0 +1,22 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
+{
+  "name": "BabyAGI",
+
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:0-18",
+
+  "postCreateCommand": "npm install",
+
+  "postAttachCommand": {
+    "server": "npm run dev"
+  },
+
+  "forwardPorts": [3000],
+
+  "portsAttributes": {
+    "3000": {
+      "label": "Application",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
